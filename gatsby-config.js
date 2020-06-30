@@ -1,10 +1,8 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Full-Stack Gatsby Bootcamp`,
+    description: `Just a simple GatsbyJS blog`,
+    author: `Fridry`,
+  },
+  plugins: [`gatsby-plugin-sass`],
 }

@@ -1,30 +1,60 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
+import headerStyles from "./navbar.module.scss"
 
 const Navbar = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
-    <header>
-      <h2>
-        <Link to="/">Gatsblog</Link>
-      </h2>
-      <ul>
+    <header className={headerStyles.header}>
+      <h1>
+        <Link to="/" className={headerStyles.title}>
+          Gatsblog - {data.site.siteMetadata.title}
+        </Link>
+      </h1>
+      <ul className={headerStyles.navList}>
         <li>
-          <Link to="/" activeStyle={{ color: "green" }}>
+          <Link
+            to="/"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about" activeStyle={{ color: "green" }}>
+          <Link
+            to="/about"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="/blog" activeStyle={{ color: "green" }}>
+          <Link
+            to="/blog"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
             Blog
           </Link>
         </li>
         <li>
-          <Link to="/contact" activeStyle={{ color: "green" }}>
+          <Link
+            to="/contact"
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+          >
             Contact
           </Link>
         </li>

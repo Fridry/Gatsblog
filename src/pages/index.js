@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import Layout from "../components/layout"
 
 const Index = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <h1>Home</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quam
@@ -17,8 +15,7 @@ const Index = () => {
       <p>
         need a developer? <Link to="/contact">Contact me</Link>
       </p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

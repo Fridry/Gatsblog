@@ -1,11 +1,10 @@
 import React from "react"
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+
+import Layout from "../components/layout"
 
 const Contact = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <h1>Contact</h1>
 
       <h3>Lorem</h3>
@@ -39,9 +38,7 @@ const Contact = () => {
       >
         Github
       </a>
-
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

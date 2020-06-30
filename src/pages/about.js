@@ -1,12 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+
+import Layout from "../components/layout"
 
 const About = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <h1>About</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, non
@@ -23,8 +22,7 @@ const About = () => {
       </p>
 
       <Link to="/contact">Contact me</Link>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
